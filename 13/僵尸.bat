@@ -1,0 +1,18 @@
+@echo off
+
+set server_config=server_zm.cfg
+
+:://///////////////////////////////////////////////////////////////////////////
+::// 	What port do you want the server to run on?			  		         //
+:://	You must port forward this port & allow it through your firewall     //
+:://///////////////////////////////////////////////////////////////////////////
+set port=27017
+
+:: example: mods/raygun
+set mod=
+
+::///////////////////////////////////////////////////////////////////////
+:://  You're done!! Give yourself a pat on the back for getting here.  //
+::///////////////////////////////////////////////////////////////////////
+
+start iw7-mod.exe -dedicated -cpMode +set net_port "%port%" +set fs_game "%mod%" +exec %server_config% +map_rotate
